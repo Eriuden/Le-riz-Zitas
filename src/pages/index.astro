@@ -3,6 +3,10 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { Image } from 'astro:assets';
+import RiZitas from "../images/RiZitas.jpeg"
+import RiziFeetent from "../images/RiziFeetent.jpeg"
+import JQuintero from "../images/J.Quintero.png"
 ---
 
 <!doctype html>
@@ -14,44 +18,41 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<Header />
 		<main>
 			<h1 class="text-center mb-24">Le riz qui nourrit</h1>
-			<p class="flex">
-				Confectionné selon d'anciens rites du temple Rissou, la légende
-				raconte que les moines découvrirent des paelleras au bord des côtes,
-				Pris d'une épiphanie, ils ajoutèrent le set à la cuisine, un arôme 
-				nouveau semblait résider dans les poêles.
-			</p>
-			<p>
-				A celà s'ajoutent donc les fameux rites du temple, en effet, le riz 
-				est massé non pas par l'action de la main, mais avec les pieds,
-				la force et l'envergure de l'appendice pédestre offre à ce riz 
-				une qualité singulière.
-			</p>
 
-			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-			Ex officiis natus, vero voluptate corporis mollitia obcaecati debitis
-			quod placeat et quo ullam eaque at eligendi aut id, laborum minus 
-			quam.</p>
+			<div class=" flex flex-row mb-20 xs:text-center sm:text-left sm:mr-[50%]
+			md:text-left md:mr-[50%]">
+				<p class="">
+					Confectionné selon d'anciens rites du temple Rissou, la légende
+					raconte que les moines découvrirent des paelleras au bord des côtes,
+					Pris d'une épiphanie, ils ajoutèrent le set à la cuisine, un arôme 
+					nouveau semblait résider dans les poêles.
+				</p>
+				<Image src={RiZitas} alt="Image Rissou" 
+				class="max-w-[30%] max-h-[10%] min-w-[30%] min-h-[10%]"/>
+			</div>
 
-			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-			Ex officiis natus, vero voluptate corporis mollitia obcaecati debitis
-			quod placeat et quo ullam eaque at eligendi aut id, laborum minus 
-			quam.</p>
+			<div class=" flex flex-row xs:text-center sm:text-right sm:ml-[50%]
+			md:text-right md:ml-[50%] mb-20">
+				<Image src={RiziFeetent} alt="Image RiziFeetent" 
+				class="max-w-[30%] max-h-[10%] min-w-[30%] min-h-[10%]"/>
+				<p class="">
+					A celà s'ajoutent donc les fameux rites du temple, en effet, le riz 
+					est massé non pas par l'action de la main, mais avec les pieds,
+					la force et l'envergure de l'appendice pédestre offre à ce riz 
+					une qualité singulière.
+				</p>
+			</div>
 
-			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-			Ex officiis natus, vero voluptate corporis mollitia obcaecati debitis
-			quod placeat et quo ullam eaque at eligendi aut id, laborum minus 
-			quam.</p>
+			<div class=" flex flex-row xs:text-center sm:text-left sm:mr-[50%]
+			md:text-left md:mr-[50%] mb-20">
+				<p class="">Les moines baptisèrent ce nouveau riz
+				"Zitas" signifiant joie en Rissou. Fort de cet héritage, notre désir
+				est de transmettre tout l'art du riz Zitas. L'établissement du riz Zitas,
+				c'est l'assurance de la joie du Rissou en bouche</p>
+				<Image src={JQuintero} alt="Image Jesus Quintero" 
+				class="max-w-[30%] max-h-[10%] min-w-[30%] min-h-[10%]"/> 
+			</div>
 
-			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-			Ex officiis natus, vero voluptate corporis mollitia obcaecati debitis
-			quod placeat et quo ullam eaque at eligendi aut id, laborum minus 
-			quam.</p>
-
-			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-			Ex officiis natus, vero voluptate corporis mollitia obcaecati debitis
-			quod placeat et quo ullam eaque at eligendi aut id, laborum minus 
-			quam.</p>
-			
 		</main>
 		<Footer />
 	</body>
