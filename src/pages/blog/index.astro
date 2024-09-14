@@ -53,13 +53,19 @@ const posts = (await getCollection('blog')).sort(
 				display: block;
 			}
 			.title {
-				margin: 0;
+				margin: auto;
 				color: rgb(var(--black));
 				line-height: 1;
 			}
-			.date {
+			.description {
 				margin: 0;
-				color: rgb(var(--gray));
+				color: black;
+			}
+
+			.ul1 {
+				background-image: url("../../images/Paella.jpg");
+				background-size: cover;
+				padding: 15%;
 			}
 			ul li a:hover h4,
 			ul li a:hover .date {
@@ -91,17 +97,17 @@ const posts = (await getCollection('blog')).sort(
 			<section>
 				<ul>
 					{
-						posts.map((post) => (
-							<li>
-								<a href={`/blog/${post.slug}/`}>
-									<img width={720} height={360} src={post.data.heroImage} alt="" />
-									<h4 class="title">{post.data.title}</h4>
-									<p class="date">
-										<FormattedDate date={post.data.pubDate} />
+						<li>
+							<ul class="ul1">
+								<a href="" class="bg-slate-50 rounded-md p-4 m-auto">									
+									<h4 class="title font-serif">La carte</h4>
+									<p class="description font-sans">
+										Notre sainte carte
 									</p>
+									<span class="text-black">15 €</span>
 								</a>
-							</li>
-						))
+							</ul>
+						</li>						
 					}
 				</ul>
 			</section>
