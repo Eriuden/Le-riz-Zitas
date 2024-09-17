@@ -48,10 +48,7 @@ const posts = (await getCollection('blog')).sort(
 			ul li img {
 				margin-bottom: 0.5rem;
 				border-radius: 12px;
-			}
-			ul li a {
-				display: block;
-			}
+			}		
 			.title {
 				margin: auto;
 				color: rgb(var(--black));
@@ -61,8 +58,7 @@ const posts = (await getCollection('blog')).sort(
 				margin: 0;
 				color: black;
 			}
-
-			.ul1 {
+			.li1 {
 				background-image: url("../../images/Paella.jpg");
 				background-size: cover;
 				padding: 15%;
@@ -95,26 +91,44 @@ const posts = (await getCollection('blog')).sort(
 		<Header />
 		<main>
 			<section>
-				<ul>
-					<li>
-						<ul class="ul1">
-							<a href="" class="bg-slate-50 rounded-md p-4 m-auto">									
-								<h2 class="title font-serif">La sainte carte</h4>				
+				
+					<ul>
+						<li class="li1">
+							<a href="" class="rounded-md p-4 m-auto">									
+								<h2 class="title font-serif font-bold">La sainte carte</h4>				
 							</a>
-						</ul>
+						</li>
 
-						<ul class="my-24">
-							<a href="" class="bg-slate-50 rounded-md p-4 m-auto">									
+						<li class="bg-slate-50 rounded-md p-4 m-auto">
+							<a href="" class="">									
 								<h2 class="title font-serif">Paellissou</h4>
 								<h3 class="description font-sans">
 									Le don des saintes paelleras
 								</p>
-								<span class="text-black">15 €</span>
 							</a>
-						</ul>
-					</li>						
-					
-				</ul>
+							<span class="text-black">15 €</span>
+						</li>
+
+						<li class="bg-slate-50 rounded-md p-4 m-auto">
+							<a href="" class="">									
+								<h2 class="title font-serif">Rikinouri</h4>
+								<h3 class="description font-sans">
+									Cuit dans l'eau du Gange
+								</p>
+								<span class="text-black">10 €</span>
+							</a>
+						</li>
+
+						<li class="bg-slate-50 rounded-md p-4 m-auto">
+							<a href="" class="">									
+								<h2 class="title font-serif">La riz</h4>
+								<h3 class="description font-sans">
+									Porte chance, no fakent
+								</p>
+							</a>
+							<span class="text-black">10 €</span>
+						</li>
+					</ul>										
 			</section>
 		</main>
 		<Footer />
