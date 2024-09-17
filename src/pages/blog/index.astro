@@ -3,12 +3,6 @@ import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
-import { getCollection } from 'astro:content';
-import FormattedDate from '../../components/FormattedDate.astro';
-
-const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-);
 ---
 
 <!doctype html>
@@ -23,7 +17,6 @@ const posts = (await getCollection('blog')).sort(
 				display: flex;
 				flex-wrap: wrap;
 				gap: 2rem;
-				list-style-type: none;
 				margin: 0;
 				padding: 0;
 			}
@@ -31,7 +24,6 @@ const posts = (await getCollection('blog')).sort(
 				width: calc(50% - 1rem);
 			}
 			ul li * {
-				text-decoration: none;
 				transition: 0.2s ease;
 			}
 			ul li:first-child {
@@ -90,18 +82,17 @@ const posts = (await getCollection('blog')).sort(
 	<body>
 		<Header />
 		<main>
-			<section>
-				
+			<section>				
 					<ul>
 						<li class="li1">
 							<a href="" class="rounded-md p-4 m-auto">									
-								<h2 class="title font-serif font-bold">La sainte carte</h4>				
+								<h2 class="title font-serif font-bold underline">La sainte carte</h4>				
 							</a>
 						</li>
 
 						<li class="bg-slate-50 rounded-md p-4 m-auto">
 							<a href="" class="">									
-								<h2 class="title font-serif">Paellissou</h4>
+								<h2 class="title font-serif underline">Paellissou</h4>
 								<h3 class="description font-sans">
 									Le don des saintes paelleras
 								</p>
@@ -111,7 +102,7 @@ const posts = (await getCollection('blog')).sort(
 
 						<li class="bg-slate-50 rounded-md p-4 m-auto">
 							<a href="" class="">									
-								<h2 class="title font-serif">Rikinouri</h4>
+								<h2 class="title font-serif underline">Rikinouri</h4>
 								<h3 class="description font-sans">
 									Cuit dans l'eau du Gange
 								</p>
@@ -121,7 +112,7 @@ const posts = (await getCollection('blog')).sort(
 
 						<li class="bg-slate-50 rounded-md p-4 m-auto">
 							<a href="" class="">									
-								<h2 class="title font-serif">La riz</h4>
+								<h2 class="title font-serif underline">La riz</h4>
 								<h3 class="description font-sans">
 									Porte chance, no fakent
 								</p>
